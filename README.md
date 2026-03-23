@@ -3,6 +3,7 @@
 This repository documents my work on **SpillR**, a full-stack web application developed as a collaborative group project.
 
 SpillR is a React Native social platform built as a synchronised commentary layer for live, reality and episodic TV. Users join live chat threads tied to specific episodes, with every comment, reaction, and poll anchored to an exact timestamp in the show's runtime.
+
 The core experience works in two modes: on premiere night, viewers watch live and drop reactions as moments unfold - plot twists, fan theories, shock cuts. After broadcast, any user can hit play on their streaming platform of choice and start timeline replay on SpillR, which displays comments, replies and reactions in real time exactly as they were posted during the original airing.
 
 SpillR is designed for the gap between watching alone and watching together, where the second-screen experience becomes part of the show.

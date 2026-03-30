@@ -19,7 +19,9 @@ Architectural diagrams can be found under screenshots/
 
 ![SpillR Homepage Screenshot](screenshots/homepage.png)
 
-![SpillR Live Chat Screenshot](screenshots/live-chat.png)
+![SpillR Live Chat Screenshot](screenshots/live-chat-page.png)
+
+![SpillR Season Select Screenshot](screenshots/season-select.png)
 
 ## Tech Stack
 

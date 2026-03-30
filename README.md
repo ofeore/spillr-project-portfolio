@@ -1,4 +1,4 @@
-# SpillR – Real-Time TV Companion App
+# SpillR - Real-Time TV Companion App
 
 Real-time mobile app for episode-based live chat, reactions, and timeline-synchronised commentary.
 
@@ -7,12 +7,12 @@ Real-time mobile app for episode-based live chat, reactions, and timeline-synchr
 ## 🎥 Demo
 
 <p align="center">
-  <img src="screenshots/homepage.png" width="600" />
+  <img src="screenshots/homepage.png" width="600" height="400" />
 </p>
 
 <p align="center">
-  <img src="screenshots/live-chat-page.png" width="45%" />
-  <img src="screenshots/season-select.png" width="45%" />
+  <img src="screenshots/live-chat-page.png" width="45%" height="400" />
+  <img src="screenshots/season-select.png" width="45%" height="400" />
 </p>
 
 ---

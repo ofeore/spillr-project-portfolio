@@ -1,68 +1,92 @@
-# SpillR – Project Case Study
+# SpillR – Real-Time TV Companion App
 
-This repository documents my work on **SpillR**, a full-stack web application developed as a collaborative group project.
+Real-time mobile app for episode-based live chat, reactions, and timeline-synchronised commentary.
 
-SpillR is a React Native social platform built as a synchronised commentary layer for live, reality and episodic TV. Users join live chat threads tied to specific episodes, with every comment, reaction, and poll anchored to an exact timestamp in the show's runtime.
+---
 
-The core experience works in two modes: on premiere night, viewers watch live and drop reactions as moments unfold - plot twists, fan theories, shock cuts. After broadcast, any user can hit play on their streaming platform of choice and start timeline replay on SpillR, which displays comments, replies and reactions in real time exactly as they were posted during the original airing.
+## 🎥 Demo
 
-SpillR is designed for the gap between watching alone and watching together, where the second-screen experience becomes part of the show.
+<p align="center">
+  <img src="screenshots/homepage.png" width="600" />
+</p>
 
-## Original Project Repositories
+<p align="center">
+  <img src="screenshots/live-chat-page.png" width="45%" />
+  <img src="screenshots/season-select.png" width="45%" />
+</p>
 
-Frontend: https://github.com/Ines1299/SpillR-app  
-Backend: https://github.com/yewen-jin/spillr-BE
+---
 
-The original repositories contain the full source code and commit history for the project.
+## Overview
 
-Architectural diagrams can be found under screenshots/
+SpillR is a React Native social platform that adds a synchronised commentary layer to live and on-demand TV.
 
-![SpillR Homepage Screenshot](screenshots/homepage.png)
+Users can:
 
-![SpillR Live Chat Screenshot](screenshots/live-chat-page.png)
+- Join episode-specific live chat threads
+- Post reactions and comments tied to exact timestamps
+- Replay commentary in sync with episode playback
 
-![SpillR Season Select Screenshot](screenshots/season-select.png)
+The platform works in two modes:
+
+- **Live viewing** → users react in real time as episodes air
+- **Replay mode** → users watch later and see comments appear exactly when they were originally posted
+
+SpillR bridges the gap between watching alone and watching together.
+
+---
+
+## My Role
+
+- Built key React Native UI components including **timeline scrubbing** and **interactive polls**
+- Implemented backend endpoints supporting **offset-based pagination** for infinite scroll
+- Developed logic to **prioritise comments from a user’s friends**
+- Contributed to **WebSocket integration** for real-time comments and reactions
+- Wrote utility functions for asynchronous data fetching
+- Researched and integrated external APIs for TV show and episode data
+
+---
+
+## Architecture
+
+The project is split across two repositories:
+
+- Frontend: https://github.com/Ines1299/SpillR-app
+- Backend: https://github.com/yewen-jin/spillr-BE
+
+Architectural diagrams are available in `/screenshots`.
+
+---
 
 ## Tech Stack
 
-## Backend:
+### Backend
 
-- Express server hosting a REST API and a Socket.io WebSocket server for real-time writes and broadcasting new comments
+- Node.js + Express REST API
+- Socket.io for real-time communication
+- PostgreSQL (Supabase)
+- Hosted on Render
+- GitHub Actions used to prevent server sleep (free tier workaround)
 
-- Express server hosted on Render
+### Frontend
 
-- Data stored in a single PostgreSQL database hosted on Supabase
+- React Native with Expo (iOS & Android)
+- Polling system for fetching updates
+- Timeline synchronisation using `setInterval()`
 
-- GitHub Action script to ping the Render server (free tier) every 10 minutes to prevent the server from going to sleep during demo day
+---
 
-## Frontend:
+## Notable Features
 
-- React Native with Expo, using a single codebase deployable to both iOS and Android
+- Real-time comments anchored to episode timestamps
+- Infinite scroll with offset-based pagination
+- Friend-prioritised comment feed
+- Live reactions and polling
+- Cross-platform mobile app
 
-Key features include:
+---
 
-- A polling system for fetching data from the backend
+## Future Improvements
 
-- An internal timer using `setInterval()` to track and synchronise comments with the episode timeline
-
-## My Role in the Project
-
-In this project I contributed to the development of several core features across both the frontend and backend, including:
-
-- Developing core frontend UI components, including the **timeline scrubbing interface** and **user opinion polls**
-
-- Implementing backend API endpoints to support **offset-based pagination for an infinite scroll comment feed**
-
-- Developing logic to **prioritise and surface comments from a user’s friends** within the feed
-
-- Researching and selecting appropriate external APIs and reviewing documentation for integrating TV show and episode data
-
-- Creating utility helper functions to support **asynchronous data fetching from the backend**
-
-- Assisting with the implementation and integration of **WebSocket functionality** across the frontend and backend to support real-time comments and reactions
-
-## To be implemented
-
-- A cron job running every 24 hours to fetch updates from the TV API, keeping show, season, and episode data current while automatically opening episode threads ahead of broadcast
-
-- A Redis-based anti-spam system to limit the rate of comments that can be sent within a short period of time
+- Cron job to sync TV API data and automatically open episode threads
+- Redis-based rate limiting to prevent spam

@@ -4,15 +4,15 @@ Real-time mobile app for episode-based live chat, reactions, and timeline-synchr
 
 ---
 
-## 🎥 Demo
+## Demo
 
 <p align="center">
-  <img src="screenshots/homepage.png" width="450" />
+  <img src="screenshots/homepage.png" width="400" />
 </p>
 
 <p align="center">
-  <img src="screenshots/live-chat-page.png" width="450" />
-  <img src="screenshots/season-select.png" width="450" />
+  <img src="screenshots/live-chat-page.png" width="400" />
+  <img src="screenshots/season-select.png" width="400" />
 </p>
 
 ---

@@ -94,3 +94,6 @@ Architectural diagrams are available in `/screenshots`.
 
 - Cron job to sync TV API data and automatically open episode threads
 - Redis-based rate limiting to prevent spam
+- Improve loading times
+- Login authentication
+

@@ -7,7 +7,7 @@ Real-time mobile app for episode-based live chat, reactions, and timeline-synchr
 ## Demo
 
 
-https://github.com/user-attachments/assets/cf04e9a8-d29e-442f-8524-978fb4c1583d
+https://github.com/user-attachments/assets/88186000-d835-4845-a8c0-de807be36123
 
 
 ## Screenshots
